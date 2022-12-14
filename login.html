@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
   <meta name="viewport" content="width, initial-scale=1.0">
   <title>Document</title>
 </head>
@@ -10,3 +11,117 @@
   init project
 </body>
 </html>
+=======
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="/tiger3.ico">
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+  <!-- layui is not for mobile or responsive web -->
+  <link rel="stylesheet" href="/assets/css/login.css">
+
+  <script src="/assets/lib/jquery.js"></script>
+  <script src="/assets/lib/layui/layui.all.js"></script>
+  <script src="/assets/js/urlRoot.js"></script>
+  <script src="/assets/js/login.js"></script>
+  
+</head>
+<body>
+  <!-- s1 top logo -->
+  <div class="layui-main"> 
+    <!-- layui webpage=>page element=> layui-main: margin: 0 auto -->
+    <img src="/assets/images/logo_tiger.png" alt="">
+  </div>
+
+  <!-- s2 register and login -->
+  <div class="login-reg">
+    <!-- s2.1 login logo -->
+    <div class="title-login-reg"></div>
+    <!-- s2.2 login area -->
+    <div class="login">
+      <form class="layui-form" id="formLogin">
+        <!-- username input  from layui=>form-->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-user"></i>  
+          <input type="text" name="username" required  lay-verify="required" placeholder="Please enter your name" autocomplete="off" class="layui-input">
+        </div>
+        <!-- password input -->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-password"></i>  
+          <input type="password" name="password" required  lay-verify="required|pwd" placeholder="Please enter your password" autocomplete="off" class="layui-input">
+        </div>
+        <!-- submit button -->
+        <div class="layui-form-item">
+          <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit lay-filter="formDemo">Submit</button>
+        </div>
+        <!-- go register link -->
+        <div class="layui-form-item link">
+          <a href="javascript:;" id="aGoRegister">Go register new account</a>
+        </div>
+      </form>  
+
+      
+    </div>
+    <!-- s2.3 register area -->
+    <div class="reg">
+      <form class="layui-form" id="formReg">
+        <!-- username input  from layui=>form-->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-user"></i>  
+          <input type="text" name="username" required  lay-verify="required" placeholder="Please enter your name" autocomplete="off" class="layui-input">
+        </div>
+        <!-- password input -->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-password"></i>  
+          <input type="password" name="password" required  lay-verify="required|pwd" placeholder="Please enter your password" autocomplete="off" class="layui-input">
+        </div>
+        <!-- repassword input -->
+        <div class="layui-form-item">
+          <i class="layui-icon layui-icon-password"></i>  
+          <input type="password" name="repassword" required  lay-verify="required|pwd|repwd" placeholder="Please enter your password again" autocomplete="off" class="layui-input">
+        </div>
+        <!-- submit button -->
+        <div class="layui-form-item">
+          <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit lay-filter="formDemo">Submit</button>
+        </div>
+        <!-- go register link -->
+        <div class="layui-form-item link">
+          <a href="javascript:;" id="aGoLogin">Already have account, go login</a>
+        </div>
+      </form>  
+      
+    </div>
+
+  </div>
+  
+</body>
+</html>
+
+<!-- vv ======================================
+* blank line
+  leave a blank line between different function areas
+
+* name class and id
+  name a class with '-' , name a id with camelCase
+
+* <img> vs. background-url.jpg
+  bg.jpg is easier to place center than <img>
+
+* open server (recommended)
+  open browser with http:// instead of file C:
+
+* root of live server
+  extension 'live server' offers http way to open browser, the root directory of server is the directory which you opened in vscode
+
+* order of link .css
+  <link>lib.css</ link> before <link> your.css</ link> so that you can modify the css style with the same class of lib
+
+* layui.all.js
+  layui.all.js rather than layui.js
+
+?? lay-verify="required|pwd"
+  no space allowed before and after |
+
+
+
+ ========================================= -->
+>>>>>>> login
