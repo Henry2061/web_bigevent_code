@@ -1,0 +1,40 @@
+.layui-footer {
+  text-align: center;
+}
+
+.iconfont {
+  margin-right: 8px;
+}
+
+.layui-icon {
+  margin-right: 8px;
+  margin-left: 20px;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+/* remove outside second scrollbar */
+.layui-body {
+  overflow: hidden;
+}
+
+ /* remove animation of <a> */
+a {
+  transition: none !important;
+}
+
+/* avatar */
+.avatar {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: #009688;
+  /* ?? why not need position  */
+  /* position: relative; */
+  /* top: 0px; */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+}
