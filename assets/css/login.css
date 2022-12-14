@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* border: black 1px solid; */
+}
+
+body,html {
+  height: 100%; 
+  width: 100%;
+  background: url('/assets/images/login_bg.jpg') no-repeat;
+  background-size: cover; 
+}
+/* logo */
+.layui-main img {
+  opacity: .4;
+}
+
+
+/* login-reg box ========*/
+.layui-main {
+  padding: 20px;
+}
+
+.login-reg {
+  background-color: white;
+  width: 440px;
+  height: 330px;
+  position: absolute; /* both absolute and fixed are good */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.title-login-reg {
+  height: 40px;
+  margin: 20px ;
+  background: url('/assets/images/login_title.png') no-repeat center;
+  background-size: cover; 
+}
+
+.reg {
+  display: none;
+}
+
+.layui-form-item {
+  padding: 0 30px;
+}
+.link {
+  display: flex;
+  justify-content: flex-end;
+}
+.layui-form-item {
+  position: relative;
+}
+.layui-icon {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+.layui-input {
+  padding-left: 36px;
+}
+
+
+/* vv ================================
+* set height and width for both of body and html in case of high resolution
+
+
+
+
+
+
+
+================================== */
