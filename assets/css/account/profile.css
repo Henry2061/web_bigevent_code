@@ -1,0 +1,20 @@
+
+body, html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 15px;
+  background-color:rgb(238, 235, 231);
+}
+
+.layui-input-block {
+  /* display: block; */
+  width: 300px;
+  /* margin-left: 10px; */
+  /* clear: none; */
+  /* position: relative; */
+  /* left: 40px; */
+  /* top:-40px; */
+}
+
