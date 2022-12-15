@@ -31,10 +31,19 @@ a {
   height: 30px;
   width: 30px;
   background-color: #009688;
-  /* ?? why not need position  */
-  /* position: relative; */
-  /* top: 0px; */
+  /* ?? why not need position relative vs. absolute  */
+  position: absolute;
+  top: 15px;
+  left:-15px;
   border-radius: 50%;
   text-align: center;
   line-height: 30px;
+}
+.layui-nav-img {
+  display: none;
+}
+#welcome {
+  font-size: 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
 }
