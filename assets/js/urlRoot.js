@@ -10,6 +10,7 @@ $.ajaxPrefilter(function(options){
   }
   options.complete = function(res){
     // console.log(res.responseJSON)
+    console.log(options.url)
     if(res.responseJSON.status===1) {
       localStorage.removeItem('token')
       location.href='/login.html'

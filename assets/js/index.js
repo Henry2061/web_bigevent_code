@@ -15,18 +15,19 @@ function getUserInfo(){
       // layui.layer.msg(res.message)
       if(res.status !==0) return console.log(res.message)
 
-      // console.log(res)
+      console.log(res.data)
       let username=res.data.nickname || res.data.username
       $('#welcome').html(`Welcome ${username} !`)
       // console.log(username[0].toUpperCase())
 
       // ss avatar conditional render
-      if(!res.data.user_pic) {
+      if(res.data.user_pic===null) {
         $('.layui-nav-img').hide()
-        $('.avatar').html(username[0].toUpperCase()).show()
+        $('.avatar-text').html(username[0].toUpperCase()).show()
       } else {
-        $('.avatar').hide()
+        $('.avatar-text').hide()
         $('.layui-nav-img').prop('src',res.data.user_pic).show()
+        
       }
     }
     
