@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="shortcut icon" href="/tiger3.ico">
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="/assets/fonts/iconfont.css">
+  <link rel="stylesheet" href="/assets/css/document/list.css">
+</head>
+<body>
+  <!-- layui=>页面元素=>面板=>卡片 -->
+  <div class="layui-card" id="addList">
+    <div class="layui-card-header">List of Document
+      
+    </div>
+    <div class="layui-card-body">
+      <!-- filter form area -->
+      <form class="layui-form" id="formFilter">
+        <div class="layui-form-item layui-inline">
+          <select name="cate_id"></select>
+        </div>
+        <div class="layui-form-item layui-inline">
+          <select name="state">
+            <option value="">Select Status</option>
+            <option value="已发布">Posted</option>
+            <option value="草稿">Draft</option>
+          </select>
+        </div>
+        <div class="layui-form-item layui-inline">
+          <button type="submit"  id="btnFilter" class="layui-btn layui-btn-m">Filter</button>  
+        </div>
+      </form>  
+      <!-- table -->
+      <table class="layui-table">
+        <colgroup>
+          <col />
+          <col width="150">
+          <col width="200">
+          <col width="150">
+          <col width="150">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Document Title</th>
+            <th>Category</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Operation</th>
+          </tr> 
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!-- page -->
+      <div id="page"></div>
+    </div>
+  </div>
+
+  <!-- template for tbody table -->
+  <script type="text/html" id="listTemplate">
+    {{each data}}
+    <tr>
+      <td>{{$value.title}}</td>
+      <td>{{$value.cate_name}}</td>
+      <td>{{$value.pub_date|dateFormat}}</td>
+      <td>{{$value.state}}</td>
+      <td>
+        <button data-id="{{$value.Id}}" type="button" class="layui-btn layui-btn-normal layui-btn-xs btnEdit">Edit</button>
+        <button data-id="{{$value.Id}}" type="button" class="layui-btn layui-btn-danger layui-btn-xs btnDelete" data-id="{{$value.Id}}" >Delete</button>
+      </td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <!-- template for category list -->
+  <script type="text/html" id="listCate">
+    <option value="">Select Category</option>
+    {{each data}}
+    <option value="{{$value.Id}}">{{$value.name}}</option>
+    <!-- <option value="{{$value.name}}">{{$value.name}}</option> -->
+    {{/each}}
+  </script>
+
+  <script src="/assets/lib/jquery.js"></script>
+  <script src="/assets/lib/layui/layui.all.js"></script>
+  <script src="/assets/lib/template-web.js"></script>
+  <script src="/node_modules/moment/moment.js"></script>
+  <script src="/assets/js/urlRoot.js"></script>
+  <!-- <script src="/assets/js/document/post.js"></script> -->
+  <script src="/assets/js/document/list.js"></script>
+</body>
+</html>
+
+<!-- =============================
+? <colgroup>
+
+* <script type="text/html" can become string with $().html()  
+
+* .btnDelete, NOT #btnDelete since multiple tr
+  =================================== -->

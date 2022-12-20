@@ -1,4 +1,7 @@
 $(function(){
+  $('#aPost').on('click',function(){
+    localStorage.removeItem('idEdit')
+  })
   getUserInfo()
   $('#signout').on('click',signout)
 })
@@ -15,7 +18,7 @@ function getUserInfo(){
       // layui.layer.msg(res.message)
       if(res.status !==0) return console.log(res.message)
 
-      console.log(res.data)
+      // console.log(res.data)
       let username=res.data.nickname || res.data.username
       $('#welcome').html(`Welcome ${username} !`)
       // console.log(username[0].toUpperCase())

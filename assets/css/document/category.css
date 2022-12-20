@@ -1,0 +1,42 @@
+* {
+  /* border: 1px solid black; */
+}
+body, html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 15px;
+  background-color:rgb(238, 235, 231);
+}
+
+#addList .layui-input-block{
+  margin-left: 180px;
+}
+#addList .layui-form-label {
+  width: 150px;
+}
+
+#addList .layui-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* popup form */
+#popupFormAdd, #popupFormEdit {
+  padding-top: 20px;
+  padding-right: 30px;
+  /* padding-left: -80px; */
+  /* width: 450px; */
+}
+
+.layui-input-block {
+  margin-left: 130px;
+}
+.layui-form-label {
+  width: 93px;
+}
+/* =====================
+* align-items adjust vertical align
+=========================*/
